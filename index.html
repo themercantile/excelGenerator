@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- 
+  The purpose of this page is to allow the user to create Excel-friendly forumlas. It's aimed at Excel N00bs. 
+  Inputs required will be: 
+  1) The full URL from a web page displaying a record or ticket. 
+  2) The part of the URL that can be changed to load a new record.
+  3) The Cell ID that will be replacing the text entered from the 2nd input. 
+-->
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Excel Formula Generator</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=IBM+Plex+Mono" type="text/css">
+  <script type="application/javascript" src="./myscript.js"></script>
+  <style>
+    h3 {
+      font-family: 'Roboto', serif;
+      font-size: 2em;
+    }
+    body {
+      font-family: 'IBM Plex Mono', serif;
+      font-size: 2em;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="headSection">
+    <h3>Excel Formula Generator</h3>
+  </div>
+
+  <div id="inputSection">
+    <label for="fullURL">Full URL: </label>
+    <input type="text" id="fullURL" name="fullURL" size="120"><br>
+    <!-- This needs to be checked to ensure it's a valid URL -->
+
+    <label for="recordVar">URL Variable: </label>
+    <input type="text" id="recordVar" name="recordVar"><br>
+    <!-- This needs to be checked to see if it forms part of the actual URL <-- DONE!! -->
+
+    <label for="excelCell">Cell reference: </label>
+    <input type="text" id="excelCell" name="excelCell"><br>
+
+    <button type="button" onclick="createURL()">
+      Create URL
+    </button>
+  </div>
+
+  <div id="displayURL">
+    <p id="outURL"></p>
+    <p id="batchURL"></p>
+  </div>
+</body>
+
+</html>
