@@ -20,7 +20,7 @@ function createURL() {
   console.log(excelCell);
   let newURL = "=HYPERLINK(CONCATENATE(\"" + fullURL.replace(recordVar, excelCell) + "\"), \"Open Hyperlink\")";
   console.log(newURL);
-  let chromeURL = "=CONCATENATE(\"start chrome " + fullURL.replace(recordVar, excelCell) + ")\"";
+  let chromeURL = "=CONCATENATE(\"start chrome " + fullURL.replace(recordVar, excelCell) + "\")";
   //start chrome https://zoomies.pupper.org/", A1, "/displayme.jizz
   
   //=CONCATENATE("start chrome https://zoomies.pupper.org/", A1, "/displayme.jizz"

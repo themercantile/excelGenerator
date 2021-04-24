@@ -11,45 +11,83 @@
 <head>
   <meta charset="UTF-8">
   <title>Excel Formula Generator</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=IBM+Plex+Mono" type="text/css">
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=IBM+Plex+Mono" type="text/css"> -->
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> -->
+  <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
   <script type="application/javascript" src="./myscript.js"></script>
   <style>
-    h3 {
-      font-family: 'Roboto', serif;
-      font-size: 2em;
-    }
     body {
-      font-family: 'IBM Plex Mono', serif;
-      font-size: 2em;
+      font-family: Asap, sans-serif;
+      margin: 0;
+    }
+    .row-m-t{
+      margin-top : 20px
     }
   </style>
 </head>
 
 <body>
-  <div id="headSection">
-    <h3>Excel Formula Generator</h3>
-  </div>
+  <div class="container-fluid">  <!--Added from bootstrap - full width container, spanning the entire width of your viewport.-->
+    <div id="headSection">
+      <div class="row row-m-t">
+        <div class="col-lg-12">
+          <h1>Excel Formula Generator</h1>
+        </div>
+      </div>
+    </div>
 
-  <div id="inputSection">
-    <label for="fullURL">Full URL: </label>
-    <input type="text" id="fullURL" name="fullURL" size="120"><br>
-    <!-- This needs to be checked to ensure it's a valid URL -->
+    <div id="inputSection">
+      <div class="row row-m-t">
+        <div class="col-lg-1">
+          <label for="fullURL">Full URL: </label>
+        </div>
+        <div class="col-lg-4">
+          <input type="text" id="fullURL" name="fullURL" size="90"><br>
+        </div>
+      </div>
 
-    <label for="recordVar">URL Variable: </label>
-    <input type="text" id="recordVar" name="recordVar"><br>
-    <!-- This needs to be checked to see if it forms part of the actual URL <-- DONE!! -->
+        <!-- This needs to be checked to ensure it's a valid URL -->
+      <div class="row row-m-t">
+        <div class="col-lg-1">
+          <label for="recordVar">URL Variable: </label>
+        </div>
+        <div class="col-lg-2">
+          <input type="text" id="recordVar" name="recordVar"><br>
+          <!-- This needs to be checked to see if it forms part of the actual URL <-- DONE!! -->
+        </div>
+        <div class="col-lg-1">
+          <label for="excelCell">Cell reference: </label>
+        </div>
+        <div class="col-lg-2">
+          <input type="text" id="excelCell" name="excelCell"><br>
+        </div>        
+      </div>
 
-    <label for="excelCell">Cell reference: </label>
-    <input type="text" id="excelCell" name="excelCell"><br>
+      <div class="row row-m-t">
+        <div class="col-lg-4">
+          <button type="button" class="btn btn-primary" onclick="createURL()"> <!--Added class from bootstrap-->
+            Create URL
+          </button>
+        </div>
+      </div>
+    </div>
 
-    <button type="button" onclick="createURL()">
-      Create URL
-    </button>
-  </div>
+    <div id="displayURL">
+      <div class="row row-m-t">
+        <div class="col-lg-12">
+          <h3 id="outURL"></h3>
+        </div>
+      </div>
+      <div class="row row-m-t">
+        <div class="col-lg-12">
+          <h3 id="batchURL"></h3>
+        </div>
+      </div>
+    </div>
 
-  <div id="displayURL">
-    <p id="outURL"></p>
-    <p id="batchURL"></p>
   </div>
 </body>
 
