@@ -5,15 +5,13 @@
   1) The full URL from a web page displaying a record or ticket. 
   2) The part of the URL that can be changed to load a new record.
   3) The Cell ID that will be replacing the text entered from the 2nd input. 
+  This project uses Bootstrap. It is intended to be used on computer monitors.
 -->
 <html>
 
 <head>
   <meta charset="UTF-8">
   <title>Excel Formula Generator</title>
-  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=IBM+Plex+Mono" type="text/css"> -->
-  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> -->
   <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
@@ -75,19 +73,22 @@
       </div>
     </div>
 
-    <div id="displayURL">
-      <div class="row row-m-t">
-        <div class="col-lg-12">
-          <h3 id="outURL"></h3>
-        </div>
+    <div class="panel panel-default row-m-t">
+      <div class="panel-heading">
+        <h3 class="panel-title">Excel Hyperlink</h3>
       </div>
-      <div class="row row-m-t">
-        <div class="col-lg-12">
-          <h3 id="batchURL"></h3>
-        </div>
+      <div class="panel-body">
+        <h5 id="outURL"></h5>
       </div>
     </div>
-
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Batch File Command</h3>
+      </div>
+      <div class="panel-body">
+        <h5 id="batchURL"></h5>
+      </div>
+    </div>
   </div>
 </body>
 
