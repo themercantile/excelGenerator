@@ -24,3 +24,9 @@ function createURL() {
   document.getElementById("outURL").innerHTML = newURL;
   document.getElementById("batchURL").innerHTML = chromeURL;
 }
+
+function createSkype() {
+  let skypeContact = document.getElementById("excelEmailCell").value;
+  let skypeURL = "=HYPERLINK(CONCATENATE(\"skype:\"," + skypeContact + ",\"?chat\"), \"Initiate Skype Chat\")";
+  document.getElementById("skypeURL").innerHTML = skypeURL;
+}
